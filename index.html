@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Embedded</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://static.zohocdn.com/catalyst/sdk/js/4.6.1/catalystWebSDK.js"></script>
+    <script src="/__catalyst/sdk/init.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+    <script>
+        const config = {
+            redirect_url: '/home.html',              // Provide your redirect URL here
+            css_url: "embeddediframe.css",           // Login page customization css file path, if not provided default css will be rendered
+            service_url: "home.html",                // This value is optional. You can provide your redirect URL here.
+            is_customize_forgot_password: false,     // Default value is false. Keep this value as true, if you wish to customize Forgot Password page
+            forgot_password_id: "login",             // Element id in which forgot password page should be loaded, by default will render in the “loginDivElementId”
+            forgot_password_css_url: "fpwd.css"      // Forgot password page customization css file path, if not provided default css will be rendered
+        };
+        catalyst.auth.signIn("login", config);
+    </script>
+</head>
+
+<body style="background: #c0c0c0">
+
+    <div class="center">
+        <header>
+            <img 
+                width="80px" 
+                height="80px" 
+                src="https://cdn2.iconfinder.com/data/icons/user-management/512/profile_settings-512.png"
+            />
+            <h1>User Profile Management</h1>
+        </header>
+    </div>
+
+    <div id="login"></div>
+
+    <div id="signup" class="signup hidden">
+        <form class="modal-content" onsubmit="signupAction(this);return false;">
+            <div class="center">
+                <h2>Sign Up</h2>
+                <p>Please fill this form to sign up for a new account.</p>
+            </div>
+
+            <label for="firstname"><b>First Name</b></label>
+            <input 
+                id="firstname" 
+                type="text" 
+                placeholder="Enter First Name" 
+                name="firstname" 
+                required
+            />
+
+            <label for="lastname"><b>Last Name</b></label>
+            <input 
+                id="lastname" 
+                type="text" 
+                placeholder="Enter Last Name" 
+                name="lastname" 
+                required
+            />
+
+            <label for="email"><b>Email</b></label>
+            <input 
+                id="mailid" 
+                type="text" 
+                placeholder="Enter Email address" 
+                name="email" 
+                required
+            />
+
+            <p>
+                By creating an account, you agree to our
+                <a href="https://www.zoho.com/catalyst/terms.html" target="_blank" style="color: dodgerblue;">
+                    Terms & Conditions
+                </a>
+            </p>
+
+            <div class="center">
+                <button class="signupfnbtn" type="submit">Sign Up</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="buttons">
+        <p class="homepage center">
+            Don't have an account? 
+            <a class="underline" href="#" onclick="showDiv()">Sign-up</a> now!
+        </p>
+    </div>
+
+</body>
+</html>

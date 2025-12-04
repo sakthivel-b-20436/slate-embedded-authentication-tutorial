@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="main.js"></script>
+    <script src="https://static.zohocdn.com/catalyst/sdk/js/4.6.1/catalystWebSDK.js"></script>
+    <script src="/__catalyst/sdk/init.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body onload="showProfile()">
+    <div id="profile" class="card" style="display: none;">
+        <h2 style="text-align:center">User Profile Information</h2>
+        <img 
+            width="200px" 
+            height="450px" 
+            src="https://cdn2.iconfinder.com/data/icons/user-management/512/profile_settings-512.png" 
+            alt="John" 
+            style="width:80px;height: 80px;"
+        >
+        <p class="title" id="fname"></p>
+        <p class="title" id="lname"></p>
+        <p class="title" id="mailid"></p>
+        <p class="title" id="tzone"></p>
+        <p class="title" id="ctime"></p>
+        <button id="logoutbtn" onclick="logout()">Logout</button>
+    </div>
+</body>
+</html>
