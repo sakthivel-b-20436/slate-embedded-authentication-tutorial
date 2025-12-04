@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Embedded</title>
+    <meta charset=“utf-8” />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Authorization Portal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://static.zohocdn.com/catalyst/sdk/js/4.6.1/catalystWebSDK.js"></script>
     <script src="/__catalyst/sdk/init.js"></script>
     <script src="main.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-
     <script>
         const config = {
             redirect_url: '/home.html',              // Provide your redirect URL here
@@ -20,7 +21,6 @@
         catalyst.auth.signIn("login", config);
     </script>
 </head>
-
 <body style="background: #c0c0c0">
 
     <div class="center">
